@@ -25,14 +25,14 @@ public class Algebra {
 
 	// Returns x1 + x2
 	public static int plus(int x1, int x2) {
-	    while ( x2 > 0) 
+	    while ( x2 > 0) {
 			x1++;
 			x2--;
-		
-		while ( x2 < 0) 
+		}
+		while ( x2 < 0) {
 			x1--;
 			x2++;
-		
+		}
 		return x1;
 	}
 	
@@ -49,6 +49,7 @@ public class Algebra {
 		 int count = x2;
     if (count < 0) {
         count = -count;     
+	}
 
     for (int i = 0; i < count; i++) {
         result = plus(result, x1);
@@ -58,7 +59,6 @@ public class Algebra {
         result = minus(0, result);  
     }
 
-}
 		return result;
 	}
 
@@ -111,7 +111,7 @@ public class Algebra {
 	// Returns the integer part of sqrt(x) 
 	public static int sqrt(int x) {
     int count = 0; 
-	while (times (count, count) >= x) {
+	while (times (count, count) <= x) {
 		 count= plus(count,1);
 		}
 		
