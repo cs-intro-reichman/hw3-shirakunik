@@ -83,7 +83,7 @@ public class Anagram {
      while (str.length() > 0) {
 
      // random number 
-	 int num = (((int) Math.random()) * str.length()); 
+	 int num = (int) (Math.random() * str.length()); 
 	 char a = str.charAt(num);
 	 str =  str.substring(0, num) + str.substring (num+1);
 
